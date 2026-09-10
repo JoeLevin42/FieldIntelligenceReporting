@@ -1,0 +1,130 @@
+# =========================
+# Visual Studio
+# =========================
+
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Test results
+[Tt]est[Rr]esult*/
+*.trx
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# ASP.NET / .NET
+appsettings.Development.json
+
+
+# =========================
+# C# / .NET
+# =========================
+
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# Coverage
+coverage/
+TestResults/
+.coverage
+.coveragexml
+
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Pytest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# User secrets
+secrets.json
+
+
+# =========================
+# OS
+# =========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+
+# =========================
+# Docker
+# =========================
+
+docker-compose.override.yml
+
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/
+
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
