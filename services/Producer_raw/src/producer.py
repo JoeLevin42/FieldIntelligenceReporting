@@ -12,7 +12,7 @@ producer = Producer({
     "bootstrap.servers": KAFKA_BROKER
 })
 
-data = load_json("data.json")
+data = load_json("field_reports.json")
 
 producer.produce(
     KAFKA_TOPIC,
