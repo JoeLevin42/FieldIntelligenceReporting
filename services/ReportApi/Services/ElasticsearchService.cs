@@ -55,7 +55,7 @@ public class ElasticsearchService
                                 b.Must(mustQueries.ToArray());
                             }
 
-                            if (filterQueries.Count > 0)
+                             if (filterQueries.Count > 0)
                             {
                                 b.Filter(filterQueries.ToArray());
                             }
@@ -301,7 +301,7 @@ public class ElasticsearchService
         }
 
         if (request.From.HasValue ||
-     request.To.HasValue)
+            request.To.HasValue)
         {
             var dateQuery = new DateRangeQuery(
                 new Field("@timestamp"));
@@ -356,13 +356,17 @@ public class ElasticsearchService
         }
     }
 
-    private static void EnsureSuccessful<T>(
+    private void EnsureSuccessful<T>(
         SearchResponse<T> response)
     {
         if (!response.IsValidResponse)
         {
+            _logger.LogError(
+                "Elasticsearch request failed: {DebugInformation}",
+                response.DebugInformation);
+
             throw new ExternalServiceException(
-                "Elasticsearch returned an unsuccessful response.");
+                $"Elasticsearch request failed: {response.DebugInformation}");
         }
     }
 }

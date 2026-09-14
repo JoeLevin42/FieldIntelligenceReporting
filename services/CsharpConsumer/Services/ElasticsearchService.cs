@@ -35,7 +35,7 @@ public class ElasticsearchService
                 .Mappings(mapping => mapping
                     .Properties<Report>(properties => properties
                         .Keyword(x => x.ReportId)
-                        .Date(x => x.Timestamp)
+                        .Date("@timestamp")
                         .Keyword(x => x.AgentId)
                         .Keyword(x => x.Unit)
                         .Keyword(x => x.Theater)
